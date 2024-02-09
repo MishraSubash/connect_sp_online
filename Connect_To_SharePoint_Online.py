@@ -12,11 +12,15 @@ sharepoint_clientsecret = "XXXXXXXXXXXXXXXXXXXXXXXX"
 
 class SharePoint_Connection:
     def __init__(self, client_id, client_secret, team):
+        """Constructor to initialize SharePoint_Connection
+        object with client_id, client_secret, and team values.
+        """
         self.client_id = client_id
         self.client_secret = client_secret
         self.team = team
 
     def establish_sharepoint_context(self):
+        # Establishes a SharePoint context using the provided client_id, client_secret, and team.
         try:
             site_url = f"https://YOUR_COMPANY.sharepoint.com/teams/{self.team}"
             context_auth = AuthenticationContext(site_url)
@@ -26,9 +30,7 @@ class SharePoint_Connection:
                 ctx = ClientContext(site_url, context_auth)
                 return ctx
         except Exception as e:
-            print(
-                f"error executing read_sharepoint_file_as_df(): {type(e).__name__} {e}"
-            )
+            print(f"Error: {type(e).__name__} {e}")
 
     def create_sharepoint_directory(self, directory_name: str):
         """
@@ -40,14 +42,14 @@ class SharePoint_Connection:
                 f"Shared Documents/General/{directory_name}"
             ).execute_query()
             if result:
-                # documents is titled as Shared Documents for relative URL in SP
                 relative_url = f"Shared Documents/General/{directory_name}"
                 print(relative_url)
                 return relative_url
             else:
-                print("folder could not be created")
+                print("Fail to create a folder/directory!")
 
     def read_sharepoint_file_as_df(self, file_path, dtype=None):
+        # Reads a file from SharePoint and returns its content as a Pandas DataFrame.
         ctx = self.establish_sharepoint_context()
         web = ctx.web
         ctx.load(web)
@@ -69,7 +71,11 @@ class SharePoint_Connection:
         return df
 
     def write_bytefile_to_sharepoint(
-        self, file_path: str, file_name: str, file_bytes: bytes
+        # Writes a byte file to SharePoint in the specified folder with the given file name.
+        self,
+        file_path: str,
+        file_name: str,
+        file_bytes: bytes,
     ) -> None:
         ctx = self.establish_sharepoint_context()
 
