@@ -110,12 +110,13 @@ connectionString = SharePoint_Connection(
 # connectionString.create_sharepoint_directory("TestFolder")
 
 
-# # get sharepoint excel
+# # read sharepoint excel file
 # df = connectionString.read_sharepoint_file_as_df(
 #     "General/folder/file_name.xlsx",
 # )
 # print(df.head())
 
+# create pandas dataframe to test upload
 df = pd.DataFrame(data={"col1": [1, 2], "col2": [3, 4], "col3": [5, 6]})
 fileBytes = bytes(df.to_csv(index=False), encoding="utf-8")
 
