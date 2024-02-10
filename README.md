@@ -1,4 +1,4 @@
-# SharePoint Python Connector
+# Connect, Read, and Update SharePoint Online Using Python
 
 Welcome to the SharePoint Python Connector repository! This project provides a Python-based solution for connecting to, reading, and updating files in SharePoint Online. Leveraging the Office365 Python packages, the code is organized using classes and methods, ensuring a modular and user-friendly structure.
 
