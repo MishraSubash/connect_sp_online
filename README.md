@@ -19,6 +19,7 @@ Welcome to the SharePoint Python Connector repository! This project provides a P
   ## Imaage##
 
 *Title: You can give whatever name you like*
+
 *App Domain: In case you are developing this application for your workplace or educational institution's SharePoint site, consider using your company's DNS as the App Domain.*
 For more info: [SharePoint Administration](https://learn.microsoft.com/en-us/sharepoint/administration/configure-an-environment-for-apps-for-sharepoint)
 
