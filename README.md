@@ -33,20 +33,18 @@ For more info: [SharePoint Administration](https://learn.microsoft.com/en-us/sha
   ## Images ##
   
 - To grant permissions, you will be required to provide the permission XML that outlines the necessary permissions. Copy the provided permission XML into the "**Permission Request XML**" box and proceed to select "**Create**."
-  
-           ```
-           <AppPermissionRequests AllowAppOnlyPolicy="true"> 
-           <AppPermissionRequest Scope="http://sharepoint/content/sitecollection" Right="Manage" />
-           </AppPermissionRequests>
-           ```
+ ```
+ <AppPermissionRequests AllowAppOnlyPolicy="true"> 
+ <AppPermissionRequest Scope="http://sharepoint/content/sitecollection" Right="Manage" />
+ </AppPermissionRequests>
+ ```
 
 - Upon selecting "**Create**", a permission consent dialog will appear. Click "**Trust It**" to grant the necessary permissions.
 
 Safeguard the created client id/secret combination as would it be your administrator account. This client ID/secret holds the capability to read/update all data within your SharePoint Online environment.
 
 Configuration settings are now complete. Next, transition to the Terminal and install the ```office365``` library using the following command.
-
-            ```pip install Office365-REST-Python-Client```
+```pip install Office365-REST-Python-Client```
 
 ## Working with Code:
 Leverage the code available in this repository to interact with SharePoint Online. Code will provide basic actions such as creating directories, reading files, and updating files seamlessly. Feel free to explore, adapt, and integrate this project into your own Python projects. Whether you are a developer, data professional, or SharePoint enthusiast, this repository serves as a valuable resource for enhancing your SharePoint integration experience.
