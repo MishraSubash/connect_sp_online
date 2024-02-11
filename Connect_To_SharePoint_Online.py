@@ -11,7 +11,7 @@ sharepoint_clientsecret = "XXXXXXXXXXXXXXXXXXXXXXXX"
 
 
 class SharePoint_Connection:
-    def __init__(self, client_id, client_secret, team):
+    def __init__(self, client_id: str, client_secret: str, team: str) -> None:
         """Constructor to initialize SharePoint_Connection
         object with client_id, client_secret, and team values.
         """
@@ -32,7 +32,7 @@ class SharePoint_Connection:
         except Exception as e:
             print(f"Error: {type(e).__name__} {e}")
 
-    def create_sharepoint_directory(self, directory_name: str):
+    def create_sharepoint_directory(self, directory_name: str) -> None:
         """
         Creates a folder in the sharepoint directory.
         """
@@ -48,7 +48,7 @@ class SharePoint_Connection:
             else:
                 print("Fail to create a folder/directory!")
 
-    def read_sharepoint_file_as_df(self, file_path, dtype=None):
+    def read_sharepoint_file_as_df(self, file_path: str, dtype=None) -> pd.DataFrame:
         # Reads a file from SharePoint and returns its content as a Pandas DataFrame.
         ctx = self.establish_sharepoint_context()
         web = ctx.web
@@ -122,7 +122,7 @@ connectionString = SharePoint_Connection(
 # )
 # print(df.head())
 
-# create pandas dataframe to test upload
+# create pandas data frame to test upload
 df = pd.DataFrame(data={"col1": [1, 2], "col2": [3, 4], "col3": [5, 6]})
 fileBytes = bytes(df.to_csv(index=False), encoding="utf-8")
 
