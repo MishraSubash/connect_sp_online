@@ -19,23 +19,26 @@ Welcome to the SharePoint Python Connector repository! This project provides a P
 
 *Title: You can give whatever name you like*
 *App Domain: In case you are developing this application for your workplace or educational institution's SharePoint site, consider using your company's DNS as the App Domain.*
-For info: [SharePoint Administration](https://learn.microsoft.com/en-us/sharepoint/administration/configure-an-environment-for-apps-for-sharepoint)
+For more info: [SharePoint Administration](https://learn.microsoft.com/en-us/sharepoint/administration/configure-an-environment-for-apps-for-sharepoint)
 
 - Next, proceed to grant ```site-scoped``` permissions for the recently created principal. Depending on your access types, use either link to grant permissions:
+  
   ```https://<YourCompany>.sharepoint.com/teams/<Team_Name>/_layouts/15/appinv.aspx```
   or
+  
   ```https://<YourCompany>-admin.sharepoint.com/_layouts/15/appinv.aspx```
-  After the page loads, input your client ID into the "**App Id**" box and select "**lookup**," as indicated in the screen below.
+
+  After the page loads, input your client ID into the "**App Id**" box and select "**lookup**," as indicated in the screen below:
 
   ## Images ##
   
 - To grant permissions, you will be required to provide the permission XML that outlines the necessary permissions. Copy the provided permission XML into the "**Permission Request XML**" box and proceed to select "**Create**."
   
-  ```
-  <AppPermissionRequests AllowAppOnlyPolicy="true"> 
-<AppPermissionRequest Scope="http://sharepoint/content/sitecollection" Right="Manage" />
- </AppPermissionRequests>
- ```
+           ```
+           <AppPermissionRequests AllowAppOnlyPolicy="true"> 
+           <AppPermissionRequest Scope="http://sharepoint/content/sitecollection" Right="Manage" />
+           </AppPermissionRequests>
+           ```
 
 - Upon selecting "**Create**", a permission consent dialog will appear. Click "**Trust It**" to grant the necessary permissions.
 
@@ -43,12 +46,9 @@ Safeguard the created client id/secret combination as would it be your administr
 
 Configuration settings are now complete. Next, transition to the Terminal and install the ```office365``` library using the following command.
 
-```pip install Office365-REST-Python-Client```
+            ```pip install Office365-REST-Python-Client```
 
-**Instantiate Connection:**
-Create a SharePoint_Connection object with your SharePoint credentials.
-
-**Working with Code:**
+## Working with Code:
 Leverage the code available in this repository to interact with SharePoint Online. Code will provide basic actions such as creating directories, reading files, and updating files seamlessly. Feel free to explore, adapt, and integrate this project into your own Python projects. Whether you are a developer, data professional, or SharePoint enthusiast, this repository serves as a valuable resource for enhancing your SharePoint integration experience.
 
 ## Contributing
