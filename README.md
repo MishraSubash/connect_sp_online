@@ -16,7 +16,7 @@ Welcome to the SharePoint Python Connector repository! This project provides a P
   
 - Navigate to this page and locate the "**Generate**" buttons positioned alongside the Client ID and Client Secret fields. Proceed to input the required information as illustrated in the accompanying screenshot.
 
-  ## Imaage##
+![](https://github.com/MishraSubash/connect_sp_online/blob/main/img/sharepointapponly1.png)
 
 *Title: You can give whatever name you like*
 
@@ -32,7 +32,7 @@ For more info: [SharePoint Administration](https://learn.microsoft.com/en-us/sha
 
   After the page loads, input your client ID into the "**App Id**" box and select "**lookup**," as indicated in the screen below:
 
-  ## Images ##
+![](https://github.com/MishraSubash/connect_sp_online/blob/main/img/sharepointapponly2.png)
   
 - To grant permissions, you will be required to provide the permission XML that outlines the necessary permissions. Copy the provided permission XML into the "**Permission Request XML**" box and proceed to select "**Create**."
  ```
