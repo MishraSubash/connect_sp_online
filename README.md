@@ -9,6 +9,7 @@ Welcome to the SharePoint Python Connector repository! This project provides a P
 
 ## Getting Started
 **Creating SharePoint Client ID and Secrets**
+
 ***Important: To generate app-based credentials, you must be a site owner of the SharePoint site.***
 - Go to the ```appregnew.aspx``` page in your SharePoint Online tenant. For example,       
            ```https://example.sharepoint.com/_layouts/15/appregnew.aspx```
