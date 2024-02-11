@@ -34,7 +34,7 @@ For more info: [SharePoint Administration](https://learn.microsoft.com/en-us/sha
 
 ![](https://github.com/MishraSubash/connect_sp_online/blob/main/img/sp_online_2.png)
   
-- To grant permissions, you will be required to provide the permission XML that outlines the necessary permissions. Copy the provided permission XML into the "**Permission Request XML**" box and proceed to select "**Create**."
+- To grant permissions, you will be required to provide the permissions (if you're a site admin - "FullControl", if you're an owner -"manage") XML that outlines the necessary permissions. Copy the provided permission XML into the "**Permission Request XML**" box and proceed to select "**Create**."
  ```
  <AppPermissionRequests AllowAppOnlyPolicy="true"> 
  <AppPermissionRequest Scope="http://sharepoint/content/sitecollection" Right="Manage" />
