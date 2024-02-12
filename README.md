@@ -1,4 +1,4 @@
-# Connect, Read, and Update SharePoint Online Using Python
+# Connect, Read, and Update files in SharePoint Online Using Python
 
 Welcome to the SharePoint Python Connector repository! This project provides a Python-based solution for connecting to, reading, and updating files in SharePoint Online. Leveraging the Office365 Python packages, the code is organized using classes and methods, ensuring a modular and user-friendly structure.
 
@@ -10,7 +10,7 @@ Welcome to the SharePoint Python Connector repository! This project provides a P
 ## Getting Started
 **Creating SharePoint Client ID and Secrets**
 
-***Important: To generate app-based credentials, you must be a site owner of the SharePoint site.***
+***Important: To generate app-based credentials, you must be at-least a site owner of the SharePoint site.***
 - Go to the ```appregnew.aspx``` page in your SharePoint Online tenant. For example,       
         ```https://<Your_Company>.sharepoint.com/teams/<Teams_Name>/_layouts/15/appregnew.aspx```
   
