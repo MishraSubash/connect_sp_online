@@ -12,23 +12,23 @@ Welcome to the SharePoint Python Connector repository! This project provides a P
 
 ***Important: To generate app-based credentials, you must be a site owner of the SharePoint site.***
 - Go to the ```appregnew.aspx``` page in your SharePoint Online tenant. For example,       
-           ```https://example.sharepoint.com/_layouts/15/appregnew.aspx```
+        ```https://<Your_Company>.sharepoint.com/teams/<Teams_Name>/_layouts/15/appregnew.aspx```
   
 - Navigate to this page and locate the "**Generate**" buttons positioned alongside the Client ID and Client Secret fields. Proceed to input the required information as illustrated in the accompanying screenshot.
 
 ![](https://github.com/MishraSubash/connect_sp_online/blob/main/img/sp_online_1.png)
 
-*Title: You can give whatever name you like*
+*Title: You can give whatever title you want*
 
 *App Domain: In case you are developing this application for your workplace or educational institution's SharePoint site, consider using your company's DNS as the App Domain.*
 For more info: [SharePoint Administration](https://learn.microsoft.com/en-us/sharepoint/administration/configure-an-environment-for-apps-for-sharepoint)
 
 - Next, proceed to grant ```site-scoped``` permissions for the recently created principal. Depending on your access types, use either link to grant permissions:
   
-  ```https://<YourCompany>.sharepoint.com/teams/<Team_Name>/_layouts/15/appinv.aspx```
+  ```https://<Your_Company>.sharepoint.com/teams/<Team_Name>/_layouts/15/appinv.aspx```
   or
   
-  ```https://<YourCompany>-admin.sharepoint.com/_layouts/15/appinv.aspx```
+  ```https://<Your_Company>-admin.sharepoint.com/_layouts/15/appinv.aspx```
 
   After the page loads, input your client ID into the "**App Id**" box and select "**lookup**," as indicated in the screen below:
 
